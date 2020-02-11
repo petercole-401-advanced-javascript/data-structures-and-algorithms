@@ -6,4 +6,4 @@ function reverseArray(arr) {
   return revArr;
 }
 
-console.log(reverseArray([0,1,2,3,4,5]));
+console.log(reverseArray(['a','b','c']), reverseArray(['0','1','2']), reverseArray(['-1','2','0']),);
