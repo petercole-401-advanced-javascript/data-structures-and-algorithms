@@ -15,4 +15,4 @@
 
 ## Solution
 <!-- Embedded whiteboard image -->
-![whiteboard](../../assets/array-reverse.jpg) "array-reverse whiteboard")
+![whiteboard](../../assets/array-reverse.jpg "array-reverse whiteboard")
