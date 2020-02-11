@@ -2,4 +2,4 @@
 
 ## Table of Contents
 
-- [array-reverse](../blob/master/challenges/arrayReverse/array-reverse.js)
+- [array-reverse](../blob/master/data-structures-and-algorithms/challenges/arrayReverse/array-reverse.js)
