@@ -2,4 +2,4 @@
 
 ## Table of Contents
 
-- [array-reverse](../master/challenges/arrayReverse/array-reverse.js) | [whiteboard](../master/assets/array-reverse.jpg)
+1. [array-reverse](../master/challenges/arrayReverse/array-reverse.js) | [whiteboard](../master/assets/array-reverse.jpg)
