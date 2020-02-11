@@ -2,4 +2,4 @@
 
 ## Table of Contents
 
-- [array-reverse](../blob/challenges/arrayReverse/array-reverse.js)
+- [array-reverse](../challenges/arrayReverse/array-reverse.js)
