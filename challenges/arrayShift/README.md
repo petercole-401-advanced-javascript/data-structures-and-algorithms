@@ -21,4 +21,4 @@
 
 ## Solution
 <!-- Embedded whiteboard image -->
-![whiteboard](../../assets/array-reverse.jpg "array-shift whiteboard")
+![whiteboard](../../assets/array-shift.jpg "array-shift whiteboard")
