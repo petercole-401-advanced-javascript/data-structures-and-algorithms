@@ -2,7 +2,8 @@
 
 function insertShiftArray(arr, val) {
   const midArr = [];
-  const length = arr.length;
+  let length = 0;
+  arr ? length = arr.length : console.log('Not an array');
   const mid = Math.round(length / 2);
   for (let i = 0; i < length; i++) {
     i < mid ? midArr[i] = arr[i] : midArr[i + 1] = arr[i];
@@ -11,4 +12,4 @@ function insertShiftArray(arr, val) {
   return midArr;
 }
 
-console.log(insertShiftArray(undefined, null));
+module.exports = insertShiftArray;

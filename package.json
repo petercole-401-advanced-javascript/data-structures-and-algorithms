@@ -1,0 +1,22 @@
+{
+  "name": "data-structures-and-algorithms",
+  "version": "1.0.0",
+  "description": "code challenges testing",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/petercole-401-advanced-javascript/data-structures-and-algorithms.git"
+  },
+  "author": "Peter Cole",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/petercole-401-advanced-javascript/data-structures-and-algorithms/issues"
+  },
+  "homepage": "https://github.com/petercole-401-advanced-javascript/data-structures-and-algorithms#readme",
+  "dependencies": {
+    "jest": "^25.1.0"
+  }
+}
