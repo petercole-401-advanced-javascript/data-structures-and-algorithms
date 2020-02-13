@@ -6,4 +6,4 @@
 
 2. [array-shift](../master/challenges/arrayShift) | [whiteboard](../master/assets/array-shift.jpg)
 
-3. [array-shift](../master/challenges/arrayBinarySearch) | [whiteboard](../master/assets/array-binary-search.jpg)
+3. [array-binary-search](../master/challenges/arrayBinarySearch) | [whiteboard](../master/assets/array-binary-search.jpg)
