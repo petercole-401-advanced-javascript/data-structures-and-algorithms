@@ -21,10 +21,11 @@
   - Node Class
   - LinkedList Class
   - Insert(node)
-  - Includes()
-  - toString (use an output object literal)s
+  - Includes() (NOT YET)
+  - toString (use an output object literal)s (NOT YET)
 - Big 0
   - 0(1) 0(n)
 
 ## API
 <!-- Description of each method publicly available to your Linked List -->
+- Insert() will insert a value at the head node of the linked list
