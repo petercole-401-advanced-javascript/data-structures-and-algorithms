@@ -20,9 +20,9 @@
 - Approach
   - Node Class
   - LinkedList Class
-  - Insert(node)
-  - Includes() (NOT YET)
-  - toString (use an output object literal)s (NOT YET)
+  - insert(node)
+  - includes()
+  - toString()
 - Big 0
   - 0(1) 0(n)
 
