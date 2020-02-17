@@ -12,24 +12,15 @@ class LinkedList {  // create list
     this.head = head;
   }
 
-  insert(value) {
+  insert(value) { // add node to the end of list
     const node = new Node(value, null)
     node.next = this.head;
     this.head = node;
-  }
-
-  printList() {
-    let current = this.head;
-    while (current.next !== null) {
-      console.log(`Value: ${current.value}`);
-      current = current.next;
-    }
   };
 
-  includes(input) {
+  includes(input) { // is a value in the list? let's traverse and check
     let current = this.head;
     while (current.next !== null) {
-      console.log({current});
       if (current.value === input) {
         return true;
       }
@@ -38,22 +29,53 @@ class LinkedList {  // create list
     return false;
   };
 
-  // toString(); // placeholder
-  append(node) { // and add a node at the end
+  toString() { // { c } -> { b } -> { a } -> NULL
     let current = this.head;
-    while (current.next !== null) {
+    let str = '';
+    do {
+      str = str.concat(`{ ${current.value} } -> `);
+      current = current.next;
+    } while (current.next !== null);
+      str = str.concat(`{ ${current.value} } -> NULL`);
+    return str;
+  };
+
+  printFull() {
+    let current = this.head;
+    let str = '';
+    do {
+      str = str.concat(`{ ${current.value} }  -> `);
+      current = current.next;
+    } while (current.next !== null);
+      str = str.concat(`{ ${current.value} } -> NULL`);
+    return str;
+  }
+
+  appendAtEnd(node) { // extra method, not part of challenge
+    let current = this.head;
+    while (current.next !== null){
       current = current.next;
     }
     current.next = node;
   }
 }
 
-const theList = new LinkedList(new Node(-1, null));
+// ------ Helpful
+// console.log({current});
 
-for(let i = 0; i < 5; i++){
-  theList.insert(i);
-}
+// ------ Build a Tester List
+const theList = new LinkedList(new Node(0, null));
+for (let i = 1; i <= 1; i++){theList.insert(i)};
 
-console.log(theList.includes(4));
+// ------ Test includes()
+// console.log(theList.includes(4));
 
-module.exports = LinkedList;
+// ------ Test toString()
+// console.log(theList.toString());
+
+// ------ Test printFull()
+console.log(theList.printFull());
+let hed = theList.head;
+console.log(hed);
+
+module.exports = {LinkedList, Node};
