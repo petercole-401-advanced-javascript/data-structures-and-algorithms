@@ -8,4 +8,4 @@
 
 3. [array-binary-search](../master/challenges/arrayBinarySearch) | [whiteboard](../master/assets/array-binary-search.jpg)
 
-4. [linked-list](../master/challenges/linked-list)
+4. [linked-list](../master/challenges/linkedList)
