@@ -14,8 +14,8 @@ class LinkedList {  // create list
   }
 
   insert(value){ // add node to the beginning of list
-    const node = new Node(value, previous, null);
-    node.previous = this.head.previous;
+    const node = new Node(value, null);
+    // node.previous = this.head.previous;
     node.next = this.head;
     this.head = node;
   };
@@ -75,7 +75,7 @@ class LinkedList {  // create list
 }
 
 function mergeList(listA, listB){
-  const array = [];
+  let array = [];
   let i = 0;
   let current = listA.head;
   while (current.next){
@@ -84,8 +84,8 @@ function mergeList(listA, listB){
     i += 2;
   }
   array[i + 2] = current.value;
-  let i = 1;
-  let current = listB.head;
+  i = 1;
+  current = listB.head;
   while (current.next){
     array[i] = current.value;
     current = current.next;
@@ -94,17 +94,18 @@ function mergeList(listA, listB){
   array[i + 2] = current.value;
   array = array.filter(obj => obj !== undefined);
   const newList = new LinkedList();
-  for(let i = 0; i < array.length; i++){
+  for(i = 0; i < array.length; i++){
     newList.insert(array[i]);
   }
   return array;
 };
 
 // ------ Build a Tester List
-const listA = new LinkedList();
-for (let i = 0; i <= 2; i++){listA.insert(i)};
-for (let i = 5; i <= 7; i++){listB.insert(i)};
+// const listA = new LinkedList();
+// const listB = new LinkedList();
+// for (let i = 0; i <= 2; i++){listA.insert(i)};
+// for (let i = 5; i <= 9; i++){listB.insert(i)};
 
-console.log(mergeList(listA, listB));
+// console.log(mergeList(listA, listB));
 
-module.exports = {LinkedList, Node};
+module.exports = {LinkedList, Node, mergeList};
