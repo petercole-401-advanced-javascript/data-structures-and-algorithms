@@ -1,4 +1,5 @@
 # Singly Linked List
+__Version 1.3.0__
 
 ## Challenge Summary
 <!-- Short summary or background information -->
@@ -15,6 +16,7 @@
   - `.append(value)` which adds a new node with the given value to the end of the list
   - `.insertBefore(value, newVal)` which add a new node with the given newValue immediately before the first value node
   - `.insertAfter(value, newVal)` which add a new node with the given newValue immediately after the first value node
+  - `returnFromEnd()` Write a method for the Linked List class which takes a number, k, as a parameter. Return the node’s value that is k from the end of the linked list. You have access to the Node class and all the properties on the Linked List class as well as the methods created in previous challenges
   - Any exceptions or errors that come from your code should be semantic, capturable errors. For example, rather than a default error thrown by your language, your code should raise/throw a custom, semantic error that describes what went wrong in calling the methods you wrote for this lab.
   - Be sure to follow your language/frameworks standard naming conventions (e.g. C# uses PascalCasing for all method and class names).
 
@@ -29,6 +31,7 @@
   - append()
   - insertBefore()
   - insertAfter()
+  - returnFromEnd()
 - Big 0
   - 0(1) 0(n^2)
 
