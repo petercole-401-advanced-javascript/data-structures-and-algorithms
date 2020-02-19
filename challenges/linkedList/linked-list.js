@@ -104,6 +104,18 @@ class LinkedList {  // create list
     }
     return flag === false ? 'no match' : 'inserted';
   };
+
+  returnFromEnd(k){
+    let current = this.head;
+    let arr = [];
+    while (current.next != null) {
+      arr.push(current.value);
+      current = current.next;
+    }
+    arr.push(current.value);
+    return arr[arr.length - k];
+  };
+
 }
 
 const lucasList = (count, first, second) => {
