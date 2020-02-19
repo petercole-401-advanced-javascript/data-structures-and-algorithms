@@ -1,8 +1,9 @@
 'use strict';
 
 class Node { // set up your node creation
-  constructor(value, next) {
+  constructor(value, previous, next) {
     this.value = value;
+    this.previous = previous;
     this.next = next;
   }
 }
@@ -12,13 +13,14 @@ class LinkedList {  // create list
     this.head = head;
   }
 
-  insert(value) { // add node to the end of list
-    const node = new Node(value, null)
+  insert(value){ // add node to the beginning of list
+    const node = new Node(value, previous, null);
+    node.previous = this.head.previous;
     node.next = this.head;
     this.head = node;
   };
 
-  includes(input) { // is a value in the list? let's traverse and check
+  includes(input){ // is a value in the list? let's traverse and check
     let current = this.head;
     if (current === undefined) {
       return false;
@@ -35,10 +37,10 @@ class LinkedList {  // create list
     return false;
   };
 
-  toString() { // { c } -> { b } -> { a } -> NULL
+  toString(){ // { c } -> { b } -> { a } -> NULL
     let current = this.head;
     let str = '';
-    if (current === undefined) {
+    if (current === undefined) { // or maybe !current
       return 'Easy there fella, you\'ve got an empty list!';
     }
     do {
@@ -49,17 +51,77 @@ class LinkedList {  // create list
     return str;
   };
 
-  printHead() { // extra method, head check
+  toStringInClass(){
+    let current = this.head;
+    let string = '';
+    while (current.next) {
+      string += `{ ${current.value} } ->`;
+      current = current.next;
+    }
+    string += `{ ${current.value} } -> NULL`;
+    return string;
+  }
+
+  printHead(){ // extra method, head check
     return this.head;
   };
 
-  appendAtEnd(node) { // extra method, add node to the end, might have an OBOE
+  append(value){ // add node to the end
+    const newNode = new Node(value);
     let current = this.head;
     while (current.next != null){
       current = current.next;
     }
-    current.next = node;
+    current.next = newNode;
   };
+
+  insertBefore(value, newVal){ // add node before a node
+    const newNode = new Node(newVal);
+    let current = this.head;
+    let flag = false;
+    while (current.next != null && flag === false){
+      if (current.value === value){
+        flag = true;
+        newNode.next = current.next;
+        newNode.previous = current.previous;
+      }
+      current = current.next;
+    }
+    return flag === false ? 'no match' : 'inserted';
+  };
+
+  insertAfter(value, newVal){ // add node after a node
+    const newNode = new Node(newVal);
+    let current = this.head;
+    let flag = false;
+    while (current.next != null && flag === false){
+      if (current.value === value){
+        flag = true;
+        newNode.next = current.next.next;
+        newNode.previous = current;
+      }
+      current = current.next;
+    }
+    return flag === false ? 'no match' : 'inserted';
+  };
+}
+
+const lucasList = (count, first, second) => {
+  const initial = new Node(first);
+  let linkList = new LinkedList(initial);
+  linkList.appendAtEnd(second);
+
+  let nextNum;
+  count = count - 2;
+
+  while (count>=2 && typeof first === 'number' && typeof second === 'number'){
+    nextNum = first + second;
+    linkList.appendAtEnd(second);
+    first = second;
+    second = nextNum;
+    count--;
+  }
+  console.log(linkList.toString());
 }
 
 // ------ Helpful
@@ -77,5 +139,10 @@ class LinkedList {  // create list
 
 // ------ Test printHead()
 // console.log('Head: ', theList.printHead());
+
+// ------ Test toStringInClass()
+// console.log(theList.toStringInClass());
+
+// lucasList(10, 0, 1);
 
 module.exports = {LinkedList, Node};
