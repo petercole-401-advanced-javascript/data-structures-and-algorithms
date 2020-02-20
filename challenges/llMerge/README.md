@@ -29,3 +29,7 @@ __Version 1.0.0__
 ## API
 <!-- Description of each method publicly available to your Linked List -->
 - `mergeLists(listA, listB)` will merge two lists
+
+## Solution
+<!-- Embedded whiteboard image -->
+![whiteboard](../../assets/ll-merge.jpg "ll-merge whiteboard")
