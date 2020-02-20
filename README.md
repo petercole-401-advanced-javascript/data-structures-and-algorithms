@@ -9,3 +9,5 @@
 3. [array-binary-search](../master/challenges/arrayBinarySearch) | [whiteboard](../master/assets/array-binary-search.jpg)
 
 4. [linked-list](../master/challenges/linkedList)
+
+5. [ll-merge](../master/challenges/llMerge) | [whiteboard](../master/assets/ll-merge.jpg)
