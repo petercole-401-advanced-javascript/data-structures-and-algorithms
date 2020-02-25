@@ -20,7 +20,7 @@
   - O(1) & O(2n)
 
 ## API
-<!-- Description of each method publicly available to your Stack and Queue-->
+<!-- Descriptionn of each method publicly available to your Stack and Queue-->
 - Stack
   - push(): takes any value as an argument and adds a new node with that value to the top of the stack
   - pop(): does not take any argument, removes the node from the top of the stack, and returns the node’s value
