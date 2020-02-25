@@ -17,23 +17,57 @@ class Stack {
     this.top = node;
   }
   pop(){
-    let popValue = this.top.value;
-    this.top = this.top.next;
+    let popValue = 'Empty List';
+    if (this.top){
+      popValue = this.top.value;
+      this.top = this.top.next;
+    }
     return popValue;
   }
 	peek(){
-		return this.storage.length ? this.storage[0].value : null;
+		return this.top ? this.top.value : null;
   }
   isEmpty(){
-    return this.storage.length;
+    return this.top ? false : true;
   }
 }
 
 class Queue {
+  constructor(){
+    this.front = null;
+  }
+  enqueue(value){
+    const node = new Node(value, null);
+    let current = this.front;
+    if (current){
+      while (current.next){
+        current = current.next;
+      }
+      current.next = node;
+    } else {
+      this.front = node;
+    }
+  }
+  append(value){ // add node to the end
+    const newNode = new Node(value);
+    let current = this.head;
+    while (current.next != null){
+      current = current.next;
+    }
+    current.next = newNode;
+  };
+  dequeue(){
 
+  }
+  peek(){
+    return this.front ? this.front.value : null;
+  }
+  isEmpty(){
+    return this.front ? false : true;
+  }
 }
 
-module.exports = { Node, Stack, Queue};
+module.exports = {Stack, Queue};
 
 // class LinkedList {  // create list
 //   constructor(head) {
