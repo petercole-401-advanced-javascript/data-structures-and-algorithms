@@ -1,50 +1,40 @@
 'use strict';
 
 class PseudoQueue{
-  constructor(){
-    this.front = null;
+  constructor(stackA = new Stack(), stackB = new Stack()){
+    this.stackA = stackA;
+    this.stackB = stackB;
   }
   enqueue(value){
-
+    for (let i = 0; i < this.stackA.storage.length; i++){
+      this.stackB.storage.push(this.stackA.storage[i]);
+    }
+    this.stackB.storage.push(value);
   }
   dequeue(){
-
+    for (let i = 0; i < this.stackA.storage.length; i++){
+      this.stackB.storage.push(this.stackA.storage[i]);
+    }
+    this.stackB.storage.pop();
   }
 }
 
-module.exports = PseudoQueue;
+class Stack{
+  constructor(){
+    this.storage = [];
+  }
+  push(value){
+    return this.storage.unshift(value);
+  }
+  pop(){
+    if (this.storage.length) return this.storage.shift();
+  }
+  peek(){
+    if (this.storage.length) return this.storage[0];
+  }
+}
 
-// class Node {
-//   constructor(value, next) {
-//     this.value = value;
-//     this.next = next;
-//   }
-// }
-
-// class Stack {
-// 	constructor(){
-// 		this.top = null;
-// 	}
-//   push(value){
-//     const node = new Node(value, null);
-//     node.next = this.top;
-//     this.top = node;
-//   }
-//   pop(){
-//     let popValue = 'Empty Stack';
-//     if (this.top){
-//       popValue = this.top.value;
-//       this.top = this.top.next;
-//     }
-//     return popValue;
-//   }
-// 	peek(){
-// 		return this.top ? this.top.value : null;
-//   }
-//   isEmpty(){
-//     return this.top ? false : true;
-//   }
-// }
+module.exports = {PseudoQueue, Stack};
 
 // class Queue {
 //   constructor(){
@@ -82,18 +72,5 @@ module.exports = PseudoQueue;
 //   }
 //   isEmpty(){
 //     return this.front ? false : true;
-//   }
-// }
-
-// module.exports = {Stack, Queue};
-
-// class LinkedList {  // create list
-//   constructor(head) {
-//     this.head = head;
-//   }
-//   insert(value){ // add node to the beginning of list
-    // const node = new Node(value, null);
-    // node.next = this.head;
-    // this.head = node;
 //   }
 // }

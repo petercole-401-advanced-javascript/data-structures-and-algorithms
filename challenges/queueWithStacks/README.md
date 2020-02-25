@@ -13,6 +13,9 @@
 
 ## Approach & Efficiency
 <!-- What approach did you take? Why? What is the Big O space/time for this approach? -->
+- I wrote tests for my Stack class
+- I wrote out my Stack class with push(), pop() and peek()
+- I wrote tests and the code for the PseudoQueue class
 - O(1) O(2n)
 
 ## API
