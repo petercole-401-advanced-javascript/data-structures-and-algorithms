@@ -44,7 +44,7 @@ describe('Stack', () => {
       const testStack = new Stack();
       testStack.push(1337);
       expect(testStack.pop()).toEqual(1337);
-      expect(testStack.pop()).toEqual('Empty List');
+      expect(testStack.pop()).toEqual('Empty Stack');
     });
   });
   describe('peek()', () => {
@@ -78,9 +78,12 @@ describe('Queue', () => {
       expect(testQueue.front.next.value).toEqual(2337);
     });
   });
-  xdescribe('dequeue()', () => {
+  describe('dequeue()', () => {
     it('will dequeue out a queue the expected value', () => {
-      
+      const testQueue = new Queue();
+      testQueue.enqueue('h4x0r');
+      testQueue.enqueue(2337);
+      expect(testQueue.dequeue()).toEqual(2337);
     });
   });
   describe('peek()', () => {

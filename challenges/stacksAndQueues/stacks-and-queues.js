@@ -17,7 +17,7 @@ class Stack {
     this.top = node;
   }
   pop(){
-    let popValue = 'Empty List';
+    let popValue = 'Empty Stack';
     if (this.top){
       popValue = this.top.value;
       this.top = this.top.next;
@@ -48,16 +48,20 @@ class Queue {
       this.front = node;
     }
   }
-  append(value){ // add node to the end
-    const newNode = new Node(value);
-    let current = this.head;
-    while (current.next != null){
-      current = current.next;
-    }
-    current.next = newNode;
-  };
   dequeue(){
-
+    let current = this.front;
+    let deqNode = {};
+    if (current != null){
+      while (current.next){
+        current = current.next;
+      }
+      deqNode = current.value;
+      current = null;
+    } else {
+      deqNode = 'Empty Queue';
+      this.front = null;
+    }
+    return deqNode;
   }
   peek(){
     return this.front ? this.front.value : null;
