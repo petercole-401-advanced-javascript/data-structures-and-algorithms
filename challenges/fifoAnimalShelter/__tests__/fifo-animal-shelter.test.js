@@ -5,17 +5,20 @@ const AnimalShelter = require('../fifo-animal-shelter.js');
 describe('AnimalShelter', () => {
   it('instantiates an empty shelter', () => {
     const testShelter = new AnimalShelter();
-    expect(testShelter.storage).toBeAnArray();
+    expect(testShelter.storage).toEqual([]);
   });
   describe('enqueue()', () => {
     it('adds animal', () => {
-      
+      const testShelter = new AnimalShelter();
+      testShelter.enqueue('dog');
+      console.log(testShelter);
+      expect(testShelter[0].type).toEqual('dog');
     });
-    it('adds multiple animals in order', () => {
+    xit('adds multiple animals in order', () => {
       
     });
   });
-  describe('dequeue()', () => {
+  xdescribe('dequeue()', () => {
     it('removes an animal', () => {
       
     });
@@ -24,4 +27,3 @@ describe('AnimalShelter', () => {
     });
   });
 });
-

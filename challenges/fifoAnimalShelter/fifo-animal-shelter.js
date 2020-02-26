@@ -1,20 +1,20 @@
 'use strict';
 
 class Cat{
-  constructor(){
-    this.type = "cat";
-    this.name = name;
-    this.color = color;
-    this.age = age;
+  constructor(type){
+    this.type = type;
+    // this.name = name;
+    // this.color = color;
+    // this.age = age;
   }
 }
 
 class Dog{
-  constructor(){
-    this.type = "dog";
-    this.name = name;
-    this.color = color;
-    this.age = age;
+  constructor(type){
+    this.type = type;
+    // this.name = name;
+    // this.color = color;
+    // this.age = age;
   }
 }
 
@@ -27,10 +27,10 @@ class AnimalShelter{
   enqueue(animal){
     switch(animal){
       case 'cat':
-        this.storage.push(new Cat());
+        this.storage.push(new Cat('cat'));
         break;
       case 'dog':
-        this.storage.push(new Dog());
+        this.storage.push(new Dog('dog'));
         break;
       default:
         return 'Needs to be cat or dog';
@@ -41,13 +41,13 @@ class AnimalShelter{
   dequeue(pref){
     switch(pref){
       case 'cat':
-        const foundAtIndex = storage.findIndex(element => element === 'cat');
-        const foundAnimal = storage[foundAtIndex];
+        let foundAtIndex = storage.findIndex(element => element.type === 'cat');
+        let foundAnimal = storage[foundAtIndex];
         storage.splice(foundAtIndex, 1);
         return foundAnimal;
       case 'dog':
-        const foundAtIndex = storage.findIndex(element => element === 'dog');
-        const foundAnimal = storage[foundAtIndex];
+        foundAtIndex = storage.findIndex(element => element.type === 'dog');
+        foundAnimal = storage[foundAtIndex];
         storage.splice(foundAtIndex, 1);
         return foundAnimal;
       default:
