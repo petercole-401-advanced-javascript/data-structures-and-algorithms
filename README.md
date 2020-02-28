@@ -11,3 +11,7 @@
 4. [linked-list](../master/challenges/linkedList)
 
 5. [ll-merge](../master/challenges/llMerge) | [whiteboard](../master/assets/ll-merge.jpg)
+
+6. [fifo-animal-shelter](../master/challenge/fifoAnimalShelter)
+
+7. [tree](../master/challenge/tree) | [whiteboard](../master/assets/tree.jpg)
