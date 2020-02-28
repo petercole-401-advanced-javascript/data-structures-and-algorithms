@@ -1,29 +1,10 @@
 'use strict';
 
-const AnimalShelter = require('../fifo-animal-shelter.js');
+const { BinaryTree, Node, Stack, Queue } = require('../tree.js');
 
-describe('AnimalShelter', () => {
-  it('instantiates an empty shelter', () => {
-    const testShelter = new AnimalShelter();
+describe('BinaryTree', () => {
+  it('instantiates an empty tree', () => {
+    const testTree = new BinaryTree();
     expect(testShelter.storage).toEqual([]);
-  });
-  describe('enqueue()', () => {
-    it('adds animal', () => {
-      const testShelter = new AnimalShelter();
-      testShelter.enqueue('dog');
-      console.log(testShelter);
-      expect(testShelter[0].type).toEqual('dog');
-    });
-    xit('adds multiple animals in order', () => {
-      
-    });
-  });
-  xdescribe('dequeue()', () => {
-    it('removes an animal', () => {
-      
-    });
-    it('returns \'Empty Shelter\' if empty', () => {
-      
-    });
   });
 });
