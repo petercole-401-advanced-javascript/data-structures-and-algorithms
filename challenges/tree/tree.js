@@ -8,43 +8,25 @@ class Node {
   }
 }
 
-class Stack {
-  constructor() {
-    this.storage = [];
-  }
-  push(value) {
-    return this.storage.unshift(value);
-  }
-  pop() {
-    if (this.storage.length) return this.storage.shift();
-  }
-  peek() {
-    if (this.storage.length) return this.storage[0];
-  }
-}
-
 class BinaryTree {
-  constructor() {
-    this.root = new BinaryTree(new Node(10, new Node(6, new Node(3, null, null), new Node(8, null, null)), new Node(15, null, new Node(20, null, null))));; 
-    //new Node();
+  constructor(root = null){
+    this.root = root;
   }
-  preOrder(root){
-    const stack = new Stack();
+  preOrder(root, stack = []){
     let current = root;
-    if (current === null) {
+    if (current === null){
       return;
     }
-    console.log(current.value);
-    if (current.left !== null) {
-      stack.push(current);
-      traverse(current.left);
+    stack.push(current.value);
+    if (current.left !== null){
+      this.preOrder(current.left, stack);
     }
-    if (current.right !== null) {
-      stack.push(current);
-      traverse(current.right);
+    if (current.right !== null){
+      this.preOrder(current.right, stack);
     }
-    preOrderTraverse(stack.pop());
+    return stack;
   }
+
   inOrder() {
 
   }
@@ -53,8 +35,14 @@ class BinaryTree {
   }
 }
 
-const test = new BinaryTree()
-console.log(test.preOrder());
+const testRoot = new Node(10, new Node(6, new Node(3, null, null), new Node(8, null, null)), new Node(15, null, new Node(20, null, null)));
+const testTree = new BinaryTree(testRoot);
+
+console.log(testTree.preOrder(testRoot));
+
+
+
+
 
 class BinarySearchTree{
   add(input) {
@@ -77,5 +65,20 @@ module.exports = { BinaryTree, Node };
 //     console.log(current);
 //     if (current.left !== null) queue.enqueue(current.left);
 //     if (current.right !== null) queue.enqueue(current.right);
+//   }
+// }
+
+// class Stack {
+//   constructor() {
+//     this.storage = [];
+//   }
+//   push(value) {
+//     return this.storage.unshift(value);
+//   }
+//   pop() {
+//     if (this.storage.length) return this.storage.shift();
+//   }
+//   peek() {
+//     if (this.storage.length) return this.storage[0];
 //   }
 // }
