@@ -1,10 +1,24 @@
 'use strict';
 
-const { BinaryTree, Node, Stack, Queue } = require('../tree.js');
+const { BinaryTree, Node } = require('../tree.js');
 
-describe('BinaryTree', () => {
-  it('instantiates an empty tree', () => {
-    const testTree = new BinaryTree();
-    expect(testShelter.storage).toEqual([]);
+describe('Node Class', () => {
+  
+});
+describe('BinaryTree Class', () => {
+  describe('Instantiate', () => {
+    it('instantiates an empty tree', () => {
+      const testTree = new BinaryTree();
+      expect(testTree.storage).toEqual([]);
+    });
+  });
+  describe('preOrder()', () => {
+    
+  });
+  describe('inOrder()', () => {
+    
+  });
+  describe('postOrder()', () => {
+    
   });
 });

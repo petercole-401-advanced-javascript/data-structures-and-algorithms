@@ -15,8 +15,6 @@
 <!-- What approach did you take? Why? What is the Big O space/time for this approach? -->
 - Node class
   - value, left and right
-- Stack class
-- Queue class
 - BinaryTree class
   - preOrder(), inOrder(), postOrder()
 
