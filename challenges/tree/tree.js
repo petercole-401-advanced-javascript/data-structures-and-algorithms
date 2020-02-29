@@ -39,14 +39,4 @@ class BinaryTree {
   }
 }
 
-class BinarySearchTree {
-  add(input) {
-    // insert new node at the correct place in the tree
-    node = new Node(input)
-  }
-  contains(input) {
-    // traversal and compare value to input to node.value
-  }
-}
-
 module.exports = { BinaryTree, Node };

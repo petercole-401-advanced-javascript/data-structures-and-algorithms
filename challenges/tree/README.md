@@ -21,3 +21,13 @@
 ## Solution
 <!-- Embedded whiteboard image -->
 ![whiteboard](../../assets/tree.jpg "tree whiteboard")
+
+<!-- class BinarySearchTree {
+  add(input) {
+    // insert new node at the correct place in the tree
+    node = new Node(input)
+  }
+  contains(input) {
+    // traversal and compare value to input to node.value
+  }
+} -->
