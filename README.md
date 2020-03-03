@@ -15,3 +15,5 @@
 6. [fifo-animal-shelter](../master/challenge/fifoAnimalShelter)
 
 7. [tree](../master/challenge/tree) | [whiteboard](../master/assets/tree.jpg)
+
+8. [fizzbuzz](../tree/master/challenge/fizzBuzzTree) | [whiteboard](../master/assets/fizz-buzz-tree.jpg)

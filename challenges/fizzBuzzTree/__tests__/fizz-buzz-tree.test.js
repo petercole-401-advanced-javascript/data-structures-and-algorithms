@@ -3,7 +3,18 @@
 const { BinaryTree, Node } = require('../fizz-buzz-tree.js');
 
 describe('Node Class', () => {
-
+  it('properly instatiates a node with null values', () => {
+    const testNode = new Node();
+    expect(testNode.value).toBeNull();
+    expect(testNode.left).toBeNull();
+    expect(testNode.right).toBeNull();
+  });
+  it('sets values to a node', () => {
+    const testNode = new Node('penguin', new Node('shark'), new Node('barracuda'))
+    expect(testNode.value).toEqual('penguin');
+    expect(testNode.left.left).toBeNull();
+    expect(testNode.right.value).toEqual('barracuda');
+  });
 });
 describe('BinaryTree Class', () => {
   describe('Instantiate', () => {
@@ -20,9 +31,21 @@ describe('BinaryTree Class', () => {
     });
   });
   describe('modulusToSring()', () => {
-    it('Divisible by 3 return Fizz', () => {
+    it('divisible by 3 return Fizz', () => {
       const testTree = new BinaryTree();
-      expect(testTree.modulusToSring(9)).toEqual('Fizz');
+      expect(testTree.modulusToSring(27)).toEqual('Fizz');
+    });
+    it('divisible by 5 return Buzz', () => {
+      const testTree = new BinaryTree();
+      expect(testTree.modulusToSring(25)).toEqual('Buzz');
+    });
+    it('divisible by 3 and 5 return FizzBuzz', () => {
+      const testTree = new BinaryTree();
+      expect(testTree.modulusToSring(30)).toEqual('FizzBuzz');
+    });
+    it('divisible by neither return the number as a string', () => {
+      const testTree = new BinaryTree();
+      expect(testTree.modulusToSring(31)).toEqual('31');
     });
   });
 });
