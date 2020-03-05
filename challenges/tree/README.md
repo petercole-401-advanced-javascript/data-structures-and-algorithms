@@ -17,6 +17,7 @@
   - value, left and right
 - BinaryTree class
   - preOrder(), inOrder(), postOrder()
+- Working on CC19
 
 ## Solution
 <!-- Embedded whiteboard image -->
