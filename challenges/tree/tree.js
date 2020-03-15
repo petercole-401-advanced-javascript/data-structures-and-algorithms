@@ -8,6 +8,10 @@ class Node {
   }
 }
 
+class Queue {
+
+}
+
 class BinaryTree {
   constructor(root = null) {
     this.root = root;
@@ -37,6 +41,41 @@ class BinaryTree {
     stack.push(current.value);
     return stack;
   }
+  breadthFirst(tree) {
+    const root = tree.root;
+    if (root === null) return null;
+    let array = [];
+    let current;
+    const breadth = new Queue();
+    breadth.enqueue(root);
+    while (breadth.peek()) {
+      current = breadth.dequeue();
+      collection.push(current.value)
+      if (current.left) breadth.enqueue(current.left);
+      if (current.right) breadth.enqueue(current.right);
+    }
+    return array;
+  }
 }
 
 module.exports = { BinaryTree, Node };
+
+
+// POSSIBLE REVERSE BREADTH FIRST
+// FROM KYLO AND DRYER
+
+function RLOT(tree) {
+  if (tree === null) return null
+  if (tree.root === null) return null
+  let queue = []
+  let output = []
+  let current = tree.root
+  queue.unshift(current)
+  while (queue.length !== 0) {
+    current = queue.pop()
+    output.unshift(current.value)
+    if (current.left !== null) queue.unshift(current.left)
+    if (current.right !== null) queue.unshift(current.right)
+  }
+  return output
+}
