@@ -15,4 +15,4 @@
 - O(2) space, O(3n) time
 
 ## Solution
-![tree-intersection-whiteboard](../blob/master/assets/tree-intersection.jpg "Tree Intersection Whiteboard")
+![tree-intersection-whiteboard](../../assets/tree-intersection.jpg "tree-intersection-whiteboard")
