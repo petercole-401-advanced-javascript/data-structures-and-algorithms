@@ -9,8 +9,8 @@
 - Split the string into an array of words
 - Create new map and set word to it as the key, with value 0
 - Iterate over, using the value as the counter
-- If a counter equals 2, return the key
+- If it is in the map, return the key
 - O(2) O(2n)
 
 ## Solution
-<!-- Embedded whiteboard image -->
+![repeated-word-whiteboard](../../assets/repeated-word.jpg "repeated-word-whiteboard")
