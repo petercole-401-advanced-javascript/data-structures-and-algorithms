@@ -7,6 +7,8 @@ class Node {
   }
 }
 
+// use an adjacency list for storage
+
 class Graph {
   constructor(node) {
     this.root = node;
