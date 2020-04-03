@@ -17,3 +17,5 @@
 7. [tree](../master/challenge/tree) | [whiteboard](../master/assets/tree.jpg)
 
 8. [fizzbuzz](../tree/master/challenge/fizzBuzzTree) | [whiteboard](../master/assets/fizz-buzz-tree.jpg)
+
+38. [depth-first](../master/challenge/depthFirst) | [whiteboard](../master/assets/depth-first.jpg)
